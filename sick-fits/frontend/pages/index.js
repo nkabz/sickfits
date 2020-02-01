@@ -1,8 +1,8 @@
-import React from 'react';
+import Items from '../components/Items'
 
 const Home = props => (
     <>
-        <p>Hey!</p>
+        <Items/>
     </>
 )
 
