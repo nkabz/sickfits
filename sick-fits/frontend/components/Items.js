@@ -27,7 +27,7 @@ const ItemsList = styled.div`
     grid-gap: 60px;
     max-width: ${ props => props.theme.maxWidth };
     margin: 0 auto;
-    @media(max-width: 588px) {
+    @media(max-width: 762px) {
         grid-template-columns: 1fr;
     }
 `;
@@ -39,7 +39,7 @@ export default class Items extends Component {
                 <Query query={ ALL_ITEMS_QUERY }>
                     { ({ data, error, loading })  => {
                         if (loading) return <p>Loading...</p>;
-                        if(error) return <p>Error ocurred  ):</p>;
+                        if (error) return <p>Error ocurred  ):</p>;
                         return <ItemsList>
                             { data.items.map(item => <Item item={ item } key={ item.id }/>)}
                         </ItemsList>
